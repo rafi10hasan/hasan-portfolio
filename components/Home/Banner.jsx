@@ -1,3 +1,4 @@
+'use client'
 import * as motion from "motion/react-client";
 import Link from "next/link";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
@@ -7,6 +8,12 @@ import { P } from "../_components/Paragraph";
 import { Button } from "../ui/button";
 
 export default function Banner() {
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/Rafi Hasan Resume.pdf'; 
+    link.download = 'rafihasan_resume.pdf'; 
+    link.click();
+  };
   return (
     <section className="bg-[#0F0715] h-auto py-2 md:py-4">
       <div className="grid w-[90vw] sm:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto gap-6 md:gap-12 lg:gap-8 py-2 md:py-8 md:grid-cols-12">
@@ -41,7 +48,7 @@ export default function Banner() {
             Eager to contribute to innovative projects, enhance skills, and grow in a collaborative
             environment as a Junior MERN Stack Developer.
           </P>
-          <Button className="bg-gradient-to-r from-pink-500 to-orange-500  hover:from-teal-400 hover:to-blue-500">
+          <Button onClick={handleDownload} className="bg-gradient-to-r from-pink-500 to-orange-500  hover:from-teal-400 hover:to-blue-500">
             Download CV
             <svg
               xmlns="http://www.w3.org/2000/svg"
