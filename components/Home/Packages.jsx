@@ -29,7 +29,7 @@ export default function Packages() {
       </motion.div>
       <div className="w-[90vw] sm:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto grid grid-cols-12 gap-6 mb-6 mt-6 shadow-md ">
         <motion.div
-          className="col-span-12 md:col-span-6 space-y-5"
+          className="col-span-12 min-[1100px]:col-span-6 space-y-5"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }} // Animate up and fade in when in view
           viewport={{ once: false, amount: 0.1 }}
@@ -51,14 +51,14 @@ export default function Packages() {
         </motion.div>
 
         <motion.div
-          className="col-span-12 md:col-span-6 space-y-4"
+          className="col-span-12 min-[1100px]:col-span-6 space-y-4"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }} // Animate up and fade in when in view
           viewport={{ once: false, amount: 0.1 }}
           transition={{ duration: 0.6 }}
         >
           <div className="p-4 bg-gray-900 rounded-lg shadow-lg">
-            <code className="block font-mono text-[10px] md:text-sm lg:text-base text-gray-200">
+            <code className="block font-mono text-[8px] md:text-sm lg:text-base text-gray-200">
               <div>
                 <span className="mr-2 text-pink-500">import</span>
                 <span className="mr-2 text-white">{`{ Accordion, AccordionItem, AccordionTitle, AccordionContent }`}</span>

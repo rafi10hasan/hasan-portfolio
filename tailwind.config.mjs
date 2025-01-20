@@ -10,7 +10,8 @@ export default {
   theme: {
   	extend: {
 		screens: {
-			'min-920px': '920px', // Define the breakpoint
+			'min-920px': '920px',
+			'min-1100px': '1100px',
 		  },
 		fontFamily: {
 			montserrat: ['var(--font-montserrat)'],
